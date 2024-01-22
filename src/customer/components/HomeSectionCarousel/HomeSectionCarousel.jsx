@@ -1,6 +1,8 @@
 import React from 'react'
 import AliceCarousel from 'react-alice-carousel'
 import HomeSectionCard from '../HomeSectionCard/HomeSectionCard';
+import { Button } from '@mui/material';
+import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 
 const HomeSectionCarousel = () => {
     const responsive = {
@@ -20,6 +22,10 @@ const HomeSectionCarousel = () => {
                     infinite
                     responsive={responsive}
                 />
+                <Button variant='contained' className='z-50' sx={{position: 'absolute', top:"8rem", right:"0rem", 
+                transform:"translateX(50%) rotate(90deg)"}} aria-label='next'>
+                    <KeyboardArrowLeftIcon sx={{transform:"rotate(90deg)"}} />
+                </Button>
             </div>
         </div>
     )
